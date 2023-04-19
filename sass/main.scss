@@ -1,0 +1,29 @@
+@import "colors";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
+
+body {
+  height: 100vh;
+  background: $grey-light;
+  padding: 88px 16px;
+  font-family: "Poppins", sans-serif;
+}
+
+main {
+  width: calc(100% - 32px);
+  border-radius: 18px;
+  border-bottom-right-radius: 100px;
+  padding: 25px;
+  background: $white-100;
+  color: $black;
+}
+
+.result {
+  font-size: 40px;
+  font-weight: 800;
+  font-style: italic;
+  line-height: 1.5;
+  padding: 20px 0px;
+  &__number{
+    color: $purple;
+  }
+}

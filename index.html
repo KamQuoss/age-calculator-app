@@ -9,8 +9,11 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
 
   <title>Frontend Mentor | Age calculator app</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/main.css">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution {
       font-size: 11px;
@@ -24,19 +27,38 @@
 </head>
 
 <body>
+  <main>
+    <form action="" class="form">
+      <label class="form__item">
+        <span>Day</span>
+        <input type="text" placeholder="DD">
+        <span>uwaga</span>
+      </label>
+      <label>
+        <span>Month</span>
+        <input type="text" placeholder="MM">
+        <span>uwaga</span>
+      </label>
+      <label>
+        <span>Year</span>
+        <input type="text" placeholder="YYYY">
+        <span>uwaga</span>
+      </label>
+    </form>
+    <button type="button">oblicz</button>
+    <div class="result">
+      <div class="result__item">
+        <span class="result__number">--</span> years
+      </div>
+      <div class="result__item">
+        <span class="result__number">--</span> months
+      </div>
+      <div class="result__item">
+        <span class="result__number">--</span> days
+      </div>
+    </div>
+  </main>
 
-  Day
-  DD
-
-  Month
-  MM
-
-  Year
-  YYYY
-
-  -- years
-  -- months
-  -- days
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
