@@ -29,23 +29,36 @@
 <body>
   <main>
     <form action="" class="form">
-      <label class="form__item">
-        <span>Day</span>
-        <input type="text" placeholder="DD">
-        <span>uwaga</span>
-      </label>
-      <label>
-        <span>Month</span>
-        <input type="text" placeholder="MM">
-        <span>uwaga</span>
-      </label>
-      <label>
-        <span>Year</span>
-        <input type="text" placeholder="YYYY">
-        <span>uwaga</span>
-      </label>
+      <div class="form__fieldset">
+        <div class="form__item input input--error">
+          <!-- można dodać max i min ewentualnie -->
+          <!-- uwagi mają różny text -->
+          <label for="day" class="input__label">Day</label>
+          <input name='day' class="input__input" type="number" placeholder="DD">
+          <div class="input__message">error</div>
+        </div>
+        <div class="form__item">
+          <label for="month" class="input__label">Month</label>
+          <input name="month" class="input__input" type="number" placeholder="MM">
+          <div class="input__message">error</div>
+        </div>
+        <div class="form__item">
+          <label for="year" class="input__label">Year</label>
+          <input name="year" class="input__input" type="number" placeholder="YYYY">
+          <div class="input__message">error</div>
+        </div>
+      </div>
+      <div class="form__button-wrapper">
+        <button type="submit" class="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44">
+            <g fill="none" stroke="#FFF" stroke-width="2">
+              <path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44" />
+            </g>
+          </svg>
+        </button>
+      </div>
+
     </form>
-    <button type="button">oblicz</button>
     <div class="result">
       <div class="result__item">
         <span class="result__number">--</span> years
@@ -62,7 +75,7 @@
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Kamila Kłosek</a>.
   </div>
 </body>
 

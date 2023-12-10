@@ -5,5 +5,8 @@
       "extensionName": ".css",
       "savePath": "~/../css"
     }
+  ],
+  "liveSassCompile.settings.includeItems": [
+    "/sass/main.scss"
   ]
 }
