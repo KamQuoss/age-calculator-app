@@ -14,38 +14,28 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./css/main.css">
 
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
 </head>
 
 <body>
   <main>
-    <form action="" class="form">
+    <form class="form" novalidate>
       <div class="form__fieldset">
-        <div class="form__item input input--error">
+        <div class="form__item input">
           <!-- można dodać max i min ewentualnie -->
           <!-- uwagi mają różny text -->
           <label for="day" class="input__label">Day</label>
-          <input name='day' class="input__input" type="number" placeholder="DD">
-          <div class="input__message">error</div>
+          <input name='day' class="input__input" type="number" placeholder="DD" min="1" max="31" required>
+          <div class="input__message">This field is required</div>
         </div>
         <div class="form__item">
           <label for="month" class="input__label">Month</label>
-          <input name="month" class="input__input" type="number" placeholder="MM">
-          <div class="input__message">error</div>
+          <input name="month" class="input__input" type="number" placeholder="MM" min="1" max="12" required>
+          <div class="input__message">This field is required</div>
         </div>
         <div class="form__item">
           <label for="year" class="input__label">Year</label>
-          <input name="year" class="input__input" type="number" placeholder="YYYY">
-          <div class="input__message">error</div>
+          <input name="year" class="input__input" type="number" placeholder="YYYY" min="1900" required>
+          <div class="input__message">This field is required</div>
         </div>
       </div>
       <div class="form__button-wrapper">
@@ -61,13 +51,13 @@
     </form>
     <div class="result">
       <div class="result__item">
-        <span class="result__number">--</span> years
+        <span class="result__number years">--</span> years
       </div>
       <div class="result__item">
-        <span class="result__number">--</span> months
+        <span class="result__number months">--</span> months
       </div>
       <div class="result__item">
-        <span class="result__number">--</span> days
+        <span class="result__number days">--</span> days
       </div>
     </div>
   </main>
@@ -77,6 +67,9 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Kamila Kłosek</a>.
   </div>
+
 </body>
+
+<script src="./scripts/script.js"></script>
 
 </html>

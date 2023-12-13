@@ -68,6 +68,7 @@ input[type=number] {
   border-color: hsl(259, 100%, 65%);
 }
 .input__message {
+  display: none;
   margin-top: 0.5rem;
   font-size: 1rem;
   font-style: italic;
@@ -76,6 +77,7 @@ input[type=number] {
   transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .input--error .input__label, .input--error .input__message {
+  display: block;
   color: hsl(0, 100%, 67%);
 }
 .input--error .input__input {
@@ -111,4 +113,10 @@ input[type=number] {
   left: 50%;
   bottom: 3rem;
   transform: translateX(-50%);
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(259, 100%, 65%);
+  text-decoration: none;
 }

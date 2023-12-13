@@ -82,7 +82,7 @@ input[type="number"] {
     }
   }
   &__message {
-    // display: none;
+    display: none;
     margin-top: 0.5rem;
     font-size: $small;
     font-style: italic;
@@ -91,6 +91,7 @@ input[type="number"] {
   &--error {
     & .input__label,
     & .input__message {
+      display: block;
       color: $error;
     }
     & .input__input {
@@ -122,10 +123,15 @@ input[type="number"] {
   }
 }
 
-
-.attribution{
+.attribution {
   position: absolute;
   left: 50%;
   bottom: 3rem;
   transform: translateX(-50%);
+  font-size: 11px;
+  text-align: center;
+  & a {
+    color: $purple;
+    text-decoration: none;
+  }
 }
