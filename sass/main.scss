@@ -1,15 +1,17 @@
 @import "colors";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
 
-$small: 1rem;
-$normal-size: 2rem;
+$small: 0.7rem;
+$normal-size: 1.3rem;
 $bigger: 6.25rem;
 $biggest: 10rem;
 
+$breakpoint: 675px;
+
 @mixin transition($properties...) {
   transition-property: $properties;
-  transition-duration: 0.5s;
-  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -29,6 +31,13 @@ main {
   color: $black;
 }
 
+@media (max-width: $breakpoint) {
+  main {
+    padding: 3rem 1rem;
+    border-bottom-right-radius: 6rem;
+  }
+}
+
 .form {
   &__fieldset {
     display: flex;
@@ -43,8 +52,24 @@ main {
     display: flex;
     flex-direction: row-reverse;
     width: 100%;
+    margin: 0.5rem 0;
     background: linear-gradient(90deg, $grey-light, $grey-light) no-repeat
       center/100% 2px;
+  }
+}
+
+@media (max-width: $breakpoint) {
+  .form {
+    &__fieldset {
+      gap: 1rem;
+    }
+    &__item {
+      width: 5.5rem;
+    }
+    &__button-wrapper {
+      margin: 2rem 0;
+      justify-content: center;
+    }
   }
 }
 
@@ -100,6 +125,24 @@ input[type="number"] {
   }
 }
 
+@media (max-width: $breakpoint) {
+  .input {
+    &__label {
+      margin-bottom: 0.4rem;
+      font-size: $small;
+      letter-spacing: 0.15rem;
+    }
+    &__input {
+      padding: 0.7rem;
+      font-size: $normal-size;
+    }
+    &__message {
+      margin-top: 0.4rem;
+      font-size: $small;
+    }
+  }
+}
+
 .button {
   width: 6rem;
   height: 6rem;
@@ -111,6 +154,21 @@ input[type="number"] {
   &:active {
     background: $black;
   }
+  & svg {
+    width: 46px;
+    height: 40px;
+  }
+}
+
+@media (max-width: $breakpoint) {
+  .button {
+    width: 4rem;
+    height: 4rem;
+    & svg {
+      width: 30px;
+      height: 26px;
+    }
+  }
 }
 
 .result {
@@ -120,6 +178,12 @@ input[type="number"] {
   line-height: 1.1;
   &__number {
     color: $purple;
+  }
+}
+
+@media (max-width: $breakpoint) {
+  .result {
+    font-size: 3.5rem;
   }
 }
 

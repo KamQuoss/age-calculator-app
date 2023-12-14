@@ -21,8 +21,6 @@
     <form class="form" novalidate>
       <div class="form__fieldset">
         <div class="form__item input">
-          <!-- można dodać max i min ewentualnie -->
-          <!-- uwagi mają różny text -->
           <label for="day" class="input__label">Day</label>
           <input name='day' class="input__input" type="number" placeholder="DD" min="1" max="31" required>
           <div class="input__message">This field is required</div>
@@ -40,10 +38,8 @@
       </div>
       <div class="form__button-wrapper">
         <button type="submit" class="button">
-          <svg xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44">
-            <g fill="none" stroke="#FFF" stroke-width="2">
-              <path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44" />
-            </g>
+          <svg>
+            <use href="./assets/images/icon-arrow.svg#arrow-down"></use>
           </svg>
         </button>
       </div>
