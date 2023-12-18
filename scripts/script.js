@@ -12,9 +12,9 @@ const input_year = document.querySelector("input[name='year']");
 const input_year_parent = input_year.parentElement;
 const input_year_message = input_year_parent.querySelector(".input__message");
 
-const year_span = document.querySelector('.years')
-const month_span = document.querySelector('.months')
-const day_span = document.querySelector('.days')
+const year_span = document.querySelector(".years");
+const month_span = document.querySelector(".months");
+const day_span = document.querySelector(".days");
 
 let d, m, y;
 
@@ -169,9 +169,22 @@ const validateDate = () => {
 };
 
 const setNumbers = () => {
-  year_span.innerHTML = year_curr - y;
-  month_span.innerHTML = month_curr - 1 - m;
-  day_span.innerHTML = day_curr - d;
+  let days_diff = day_curr - d;
+  let months_diff = month_curr - 1 - m;
+  let years_diff = year_curr - y;
+
+  if (days_diff < 0) {
+    days_diff = 31 - Math.abs(days_diff);
+    months_diff--;
+    if (months_diff < 0) {
+      months_diff = 12 - 1;
+      years_diff--;
+    }
+  }
+
+  year_span.innerHTML = years_diff;
+  month_span.innerHTML = months_diff;
+  day_span.innerHTML = Math.abs(days_diff);
 };
 
 setMaxYearValue();
